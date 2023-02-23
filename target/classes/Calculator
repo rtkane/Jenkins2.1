@@ -1,0 +1,47 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by FernFlower decompiler)
+//
+
+import java.util.UUID;
+
+class Calculator {
+    Calculator() {
+    }
+
+    int add(int a, int b) {
+        return a + b;
+    }
+
+    int subtract(int a, int b) {
+        return a - b;
+    }
+
+    int multiply(int a, int b) {
+        return a * b;
+    }
+
+    int divide(int a, int b) {
+        return a / b;
+    }
+
+    int fibonacciNumberFinder(int n) {
+        if (n == 0) {
+            return 0;
+        } else {
+            return n == 1 ? 1 : this.fibonacciNumberFinder(n - 1) + this.fibonacciNumberFinder(n - 2);
+        }
+    }
+
+    String intToBinaryNumber(int n) {
+        String result = Integer.toBinaryString(n);
+        System.out.println(result);
+        return result;
+    }
+
+    String createUniqueID(String n) {
+        String uniqueID = UUID.randomUUID().toString();
+        n = n + uniqueID;
+        return n;
+    }
+}
